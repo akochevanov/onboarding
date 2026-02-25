@@ -89,8 +89,8 @@ body {
 
 .header-brand {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 22px;
   color: var(--text-primary);
 }
 
@@ -604,7 +604,7 @@ button.carousel-card {
   height: 40px;
   padding: 0;
   border: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(243, 245, 247, 0.7);
   border-radius: 50%;
   box-shadow: var(--shadow-sm);
   color: var(--text-primary);
@@ -665,12 +665,12 @@ button.carousel-card {
 /* Tabs */
 .tabs {
   display: flex;
-  gap: 24px;
-  border-bottom: 2px solid rgba(20, 29, 34, 0.12);
+  gap: 4px;
+  border-bottom: 1px solid #E3E4E4;
 }
 
 .tab {
-  padding: 10px 0 12px;
+  padding: 10px 12px 12px;
   border: none;
   background: none;
   font-family: var(--font-body);
@@ -690,7 +690,7 @@ button.carousel-card {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -2px;
+  bottom: -1px;
   height: 2px;
   background: var(--text-primary);
 }
@@ -706,24 +706,9 @@ button.carousel-card {
   cursor: default;
 }
 
-.btn-outline-primary {
-  background: rgba(20, 29, 34, 0.08);
-  color: var(--text-primary);
-  border: none;
-}
-
-.btn-outline-primary:hover {
-  background: rgba(20, 29, 34, 0.12);
-}
-
-.btn-primary {
-  background: var(--accent-yellow);
-  color: var(--text-primary);
-}
-
 .btn-outline {
   height: 40px;
-  background: rgba(20, 29, 34, 0.08);
+  background: #F3F5F7;
   color: var(--text-primary);
   border: none;
   display: inline-flex;
@@ -734,6 +719,18 @@ button.carousel-card {
 
 .btn-outline:hover {
   background: rgba(20, 29, 34, 0.12);
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  min-width: 40px;
+}
+
+.btn-primary {
+  background: var(--accent-yellow);
+  color: var(--text-primary);
 }
 
 .btn-trade {
@@ -769,27 +766,6 @@ button.carousel-card {
 .btn-withdraw-icon {
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M18 6L6 18M6 6l12 12'/%3E%3C/svg%3E") center/contain no-repeat;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M18 6L6 18M6 6l12 12'/%3E%3C/svg%3E") center/contain no-repeat;
-}
-
-.btn-icon {
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  color: var(--text-secondary);
-  font-size: 18px;
-  border: 1px solid transparent;
-  border-radius: var(--border-radius-sm);
-  cursor: pointer;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
-}
-
-.btn-icon:hover {
-  border-color: rgba(20, 29, 34, 0.2);
-  background: rgba(20, 29, 34, 0.04);
 }
 
 /* Toolbar */
@@ -856,10 +832,9 @@ button.carousel-card {
 
 .account-card {
   background: var(--bg-page);
-  border: 1px solid rgba(20, 29, 34, 0.08);
+  border: 1px solid #E3E4E4;
   border-radius: var(--border-radius-md);
   padding: 24px;
-  box-shadow: var(--shadow-sm);
 }
 
 .account-card-header {
@@ -886,19 +861,8 @@ button.carousel-card {
   letter-spacing: 0.5px;
 }
 
-/* Real = yellow (Figma) */
-.badge-real {
-  background: rgba(255, 222, 2, 0.08);
-  color: var(--text-primary);
-}
-
-.badge-mt {
-  background: rgba(20, 29, 34, 0.08);
-  color: var(--text-primary);
-}
-
-.badge-type {
-  background: rgba(20, 29, 34, 0.06);
+.badge-tag {
+  background: #F3F5F7;
   color: var(--text-primary);
 }
 

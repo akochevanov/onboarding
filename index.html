@@ -20,7 +20,7 @@
       <div class="header-right">
         <button type="button" class="header-btn header-btn-balance" aria-label="Balance">
           <span class="header-btn-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1667 6.66665V4.16665C14.1667 3.94563 14.0789 3.73367 13.9226 3.57739C13.7663 3.42111 13.5543 3.33331 13.3333 3.33331H4.99999C4.55797 3.33331 4.13404 3.50891 3.82148 3.82147C3.50892 4.13403 3.33333 4.55795 3.33333 4.99998M3.33333 4.99998C3.33333 5.44201 3.50892 5.86593 3.82148 6.17849C4.13404 6.49105 4.55797 6.66665 4.99999 6.66665H15C15.221 6.66665 15.433 6.75444 15.5893 6.91072C15.7455 7.067 15.8333 7.27897 15.8333 7.49998V9.99998M3.33333 4.99998V15C3.33333 15.442 3.50892 15.8659 3.82148 16.1785C4.13404 16.4911 4.55797 16.6666 4.99999 16.6666H15C15.221 16.6666 15.433 16.5788 15.5893 16.4226C15.7455 16.2663 15.8333 16.0543 15.8333 15.8333V13.3333M16.6667 9.99998V13.3333H13.3333C12.8913 13.3333 12.4674 13.1577 12.1548 12.8452C11.8423 12.5326 11.6667 12.1087 11.6667 11.6666C11.6667 11.2246 11.8423 10.8007 12.1548 10.4881C12.4674 10.1756 12.8913 9.99998 13.3333 9.99998H16.6667Z"/></svg></span>
-          <span class="header-btn-text">530.12 USD</span>
+          <span class="header-btn-text">2,056.73 USD</span>
         </button>
         <button type="button" class="header-btn header-btn-icon-only" aria-label="Language"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
         <button type="button" class="header-btn header-btn-icon-only" aria-label="Help"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></button>
@@ -138,7 +138,7 @@
         <!-- Page title + Open new account -->
         <div class="page-title-row">
           <h1 class="page-title">My accounts</h1>
-          <button type="button" class="btn btn-outline-primary">+ Open new account</button>
+          <button type="button" class="btn btn-outline">+ Open new account</button>
         </div>
 
         <!-- Tabs (left) + Sort & view (right) -->
@@ -146,7 +146,6 @@
           <div class="tabs">
             <button type="button" class="tab tab-active">Real</button>
             <button type="button" class="tab">Demo</button>
-            <button type="button" class="tab">Archived</button>
           </div>
           <div class="toolbar-right">
             <select class="toolbar-sort" aria-label="Sort">
@@ -165,9 +164,9 @@
           <article class="account-card">
             <div class="account-card-header">
               <div class="account-card-badges">
-                <span class="badge badge-real">Real</span>
-                <span class="badge badge-mt">MT4</span>
-                <span class="badge badge-type">Standard Cent</span>
+                <span class="badge badge-tag">Real</span>
+                <span class="badge badge-tag">MT4</span>
+                <span class="badge badge-tag">Standard Cent</span>
               </div>
               <div class="account-card-title-row">
                 <h2 class="account-card-name">#213169630 My super account</h2>
@@ -179,7 +178,7 @@
                 <button type="button" class="btn btn-trade">Trade</button>
                 <button type="button" class="btn btn-outline">Deposit</button>
                 <button type="button" class="btn btn-outline">Withdraw</button>
-                <button type="button" class="btn btn-icon" aria-label="More"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg></button>
+                <button type="button" class="btn btn-outline btn-icon" aria-label="More"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg></button>
               </div>
             </div>
             <div class="account-card-details">
@@ -196,9 +195,9 @@
           <article class="account-card account-card-expanded">
             <div class="account-card-header">
               <div class="account-card-badges">
-                <span class="badge badge-real">Real</span>
-                <span class="badge badge-mt">MT5</span>
-                <span class="badge badge-type">Standard Cent</span>
+                <span class="badge badge-tag">Real</span>
+                <span class="badge badge-tag">MT5</span>
+                <span class="badge badge-tag">Standard Cent</span>
               </div>
               <div class="account-card-title-row">
                 <h2 class="account-card-name">#137000158 Experimental trading</h2>
@@ -210,7 +209,7 @@
                 <button type="button" class="btn btn-trade">Trade</button>
                 <button type="button" class="btn btn-outline">Deposit</button>
                 <button type="button" class="btn btn-outline">Withdraw</button>
-                <button type="button" class="btn btn-icon" aria-label="More"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg></button>
+                <button type="button" class="btn btn-outline btn-icon" aria-label="More"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg></button>
               </div>
             </div>
             <div class="account-card-details">
