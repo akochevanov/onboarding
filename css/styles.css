@@ -918,8 +918,9 @@ button.carousel-card {
 
 .account-card-details {
   margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(20, 29, 34, 0.08);
+  padding: 16px;
+  background: #F3F5F7;
+  border-radius: var(--border-radius-md);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px 32px;
