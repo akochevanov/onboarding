@@ -238,6 +238,147 @@ body {
   padding-left: 0;
 }
 
+/* Onboarding dialog — overlay + modal 600px, centered */
+.dialog-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+body.dialog-open .dialog-overlay {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dialog-wrap {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1002;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  pointer-events: none;
+}
+
+.dialog-wrap[hidden] {
+  display: none !important;
+}
+
+body.dialog-open .dialog-wrap {
+  display: flex;
+  pointer-events: none;
+}
+
+body.dialog-open .dialog-wrap .dialog {
+  pointer-events: auto;
+}
+
+.dialog {
+  width: 100%;
+  max-width: 600px;
+  background: var(--bg-page);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.08), 0 0 6px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  position: relative;
+}
+
+.dialog-indicators .dialog-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 240 / 135;
+  background: rgba(20, 29, 34, 0.06);
+  overflow: hidden;
+}
+
+.dialog-indicators .dialog-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: rgba(108, 133, 149, 0.08);
+  border-radius: 50%;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background-color 0.15s ease;
+}
+
+.dialog-close:hover {
+  background: rgba(108, 133, 149, 0.14);
+}
+
+.dialog-close svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.dialog-content {
+  padding: 24px 24px 0;
+  border-top: 1px solid rgba(20, 29, 34, 0.12);
+}
+
+.dialog-title {
+  margin: 0 0 12px;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.25px;
+  color: var(--text-primary);
+}
+
+.dialog-desc {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: var(--text-primary);
+}
+
+.dialog-actions {
+  padding: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dialog-actions .dialog-cta {
+  min-width: 80px;
+}
+
+/* Notification / carousel items that open dialog — button reset */
+.notifications-popup-item-open-dialog {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background: none;
+  text-align: left;
+  font: inherit;
+}
+
 /* Sidebar — white, active = light grey */
 .sidebar-overlay {
   display: none;
@@ -386,6 +527,12 @@ body.sidebar-open .sidebar-overlay {
   gap: 16px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   overflow: hidden;
+}
+
+button.carousel-card {
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
 }
 
 .carousel-card-green {
@@ -554,7 +701,7 @@ body.sidebar-open .sidebar-overlay {
   border-radius: var(--border-radius-md);
   font-family: var(--font-body);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
   cursor: default;
 }
@@ -625,10 +772,24 @@ body.sidebar-open .sidebar-overlay {
 }
 
 .btn-icon {
-  padding: 8px 12px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   color: var(--text-secondary);
   font-size: 18px;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-icon:hover {
+  border-color: rgba(20, 29, 34, 0.2);
+  background: rgba(20, 29, 34, 0.04);
 }
 
 /* Toolbar */
