@@ -227,6 +227,17 @@ body.terminal-page {
   border-right: 3px solid var(--term-border);
 }
 
+/* On short viewports: keep lead panel and footer visible (sticky to viewport) */
+@media (max-height: 800px) {
+  .main-wrap-terminal.lead-panel-open .terminal-lead-panel {
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
+    align-self: flex-start;
+  }
+}
+
 .terminal-lead-panel-inner {
   width: 380px;
   min-width: 380px;
