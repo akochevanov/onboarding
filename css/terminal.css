@@ -25,23 +25,12 @@ body.terminal-page {
   border-bottom: 3px solid var(--term-border);
 }
 
-.terminal-page .header-terminal .header-brand-terminal {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 22px;
-  font-weight: 500;
-  color: #fff;
+.terminal-page .header-terminal .header-brand-terminal-logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
   margin-right: 8px;
-  text-decoration: none;
-}
-
-.terminal-page .header-terminal .header-brand-back-icon {
-  flex-shrink: 0;
-}
-
-.terminal-page .header-terminal .header-brand-terminal:hover {
-  color: rgba(255, 255, 255, 0.85);
 }
 
 .terminal-page .header-terminal .header-left {
@@ -153,6 +142,150 @@ body.terminal-page {
   height: 24px;
   display: block;
   object-fit: contain;
+}
+
+.terminal-page .header-terminal .header-btn-bell-terminal img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.terminal-page .header-terminal .header-btn-bell-terminal:hover img {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+/* Terminal notifications popup (dark theme) */
+.terminal-header-notifications {
+  position: relative;
+}
+
+.terminal-notifications-popup {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 360px;
+  min-width: 320px;
+  max-width: 400px;
+  background: #272F34;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 8px 0;
+  z-index: 1000;
+  border: 1px solid var(--term-border);
+}
+
+.terminal-notifications-popup[hidden] {
+  display: none;
+}
+
+.terminal-notifications-popup-item {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid var(--term-border);
+  transition: background-color 0.15s ease;
+}
+
+.terminal-notifications-popup-item:last-child {
+  border-bottom: none;
+}
+
+.terminal-notifications-popup-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.terminal-notifications-popup-item-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-notifications-popup-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.terminal-notifications-popup-item-title {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.terminal-notifications-popup-item-time {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 4px;
+}
+
+.terminal-notifications-popup-item-dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: #E53935;
+  border-radius: 50%;
+  align-self: center;
+}
+
+/* Terminal Apps popup (same as index, dark theme) */
+.terminal-header-apps {
+  position: relative;
+}
+
+.terminal-page .header-terminal .terminal-apps-icon {
+  filter: brightness(0) invert(1);
+}
+
+.terminal-apps-popup {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  min-width: 200px;
+  background: #272F34;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 8px 0;
+  z-index: 1000;
+  border: 1px solid var(--term-border);
+}
+
+.terminal-apps-popup[hidden] {
+  display: none;
+}
+
+.terminal-apps-popup-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  transition: background-color 0.15s ease;
+}
+
+.terminal-apps-popup-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.terminal-apps-popup-item-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.terminal-apps-popup-item-label {
+  white-space: nowrap;
 }
 
 .terminal-page .header-terminal .header-btn:hover,

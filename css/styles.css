@@ -92,10 +92,10 @@ body {
 }
 
 .header-brand {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 22px;
-  color: var(--text-primary);
+  display: block;
+  width: 122px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .header-actions {
@@ -130,7 +130,8 @@ body {
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.header-btn:hover {
+.header-btn:hover,
+.header-btn.is-active {
   border-color: var(--border-color);
   background: rgba(20, 29, 34, 0.04);
 }
@@ -155,10 +156,13 @@ body {
 }
 
 .header-btn-icon svg,
-.header-btn-icon-only svg {
+.header-btn-icon-only svg,
+.header-btn-icon .header-btn-icon-img,
+.header-btn-icon-only .header-btn-icon-img {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .header-btn-icon-only {
@@ -175,6 +179,7 @@ body {
 }
 
 .header-btn-badge {
+  display: none; /* red dot hidden */
   position: absolute;
   top: 8px;
   right: 8px;
@@ -255,6 +260,55 @@ body {
   font-size: 12px;
   color: var(--text-secondary);
   margin-top: 4px;
+}
+
+/* Apps popup (grid-dots menu) */
+.header-apps {
+  position: relative;
+}
+
+.apps-popup {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  min-width: 200px;
+  background: #fff;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  z-index: 1000;
+  border: 1px solid var(--border-color);
+}
+
+.apps-popup[hidden] {
+  display: none;
+}
+
+.apps-popup-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  transition: background-color 0.15s ease;
+}
+
+.apps-popup-item:hover {
+  background: rgba(20, 29, 34, 0.04);
+}
+
+.apps-popup-item-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.apps-popup-item-label {
+  white-space: nowrap;
 }
 
 /* Onboarding dialog — overlay + modal 600px, centered */
@@ -517,10 +571,22 @@ body.sidebar-open .sidebar-overlay {
   opacity: 0.85;
 }
 
+.nav-icon:has(.nav-icon-img) {
+  width: 20px;
+  height: 20px;
+}
+
 .nav-icon svg {
   display: block;
   width: 16px;
   height: 16px;
+}
+
+.nav-icon .nav-icon-img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .nav-label {
@@ -529,11 +595,11 @@ body.sidebar-open .sidebar-overlay {
 
 /* Sub-items (Summary, History, Dividends, Trading terminal): no left icon, indent for alignment */
 .nav-item-sub {
-  padding-left: 44px; /* 16px side + 16px icon + 12px gap = align with parent item text */
+  padding-left: 48px; /* 16px side + 20px icon + 12px gap = align with parent item text */
 }
 
 .nav-item-no-icon {
-  padding-left: 44px;
+  padding-left: 48px;
 }
 
 .nav-icon-end {
@@ -984,30 +1050,121 @@ a.btn {
   background: #F3F5F7;
   border-radius: var(--border-radius-md);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 16px 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 12px 24px;
 }
 
-.account-detail {
+.account-detail-row {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  align-items: flex-end;
+  gap: 8px;
+  min-width: 0;
 }
 
 .account-detail-label {
+  flex-shrink: 0;
   font-family: var(--font-body);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 16px;
-  letter-spacing: 0.5px;
   color: var(--text-secondary);
 }
 
+.account-detail-dots {
+  flex: 1;
+  min-width: 0;
+  height: 0;
+  margin: 0 4px;
+  border-bottom: 1px dotted #b0b8c0;
+}
+
 .account-detail-value {
+  flex-shrink: 0;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 500;
   color: var(--text-primary);
+}
+
+/* Server row + Change password (bottom of account card) */
+/* Hide details and server row only in the expanded card (second card) */
+.account-card-expanded .account-card-details,
+.account-card-expanded .account-card-server-row {
+  display: none;
+}
+
+.account-card-server-row {
+  margin-top: 12px;
+  padding-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  font-family: var(--font-body);
+  font-size: 13px;
+}
+
+.account-server-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.account-server-label {
+  color: var(--text-secondary);
+}
+
+.account-server-value {
+  color: var(--text-primary);
+}
+
+.account-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+.account-copy-btn:hover {
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.account-copy-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.account-change-password {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 13px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.account-change-password:hover {
+  text-decoration: underline;
+}
+
+.account-change-password-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
 }
 
 .account-link {
@@ -1101,6 +1258,10 @@ a.btn {
     padding: 16px 0 16px 16px;
     min-height: 130px;
     height: auto;
+  }
+
+  .account-card-details {
+    grid-template-columns: 1fr;
   }
 }
 

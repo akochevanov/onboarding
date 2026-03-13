@@ -15,17 +15,17 @@
     <header class="header">
       <div class="header-left">
         <button type="button" class="header-burger" aria-label="Open menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M3 6h18"/><path d="M3 18h18"/></svg></button>
-        <span class="header-brand">TradeApp</span>
+        <img class="header-brand" src="css/images/exness black logo.svg" alt="TradeApp" width="122" height="40" />
       </div>
       <div class="header-right">
         <button type="button" class="header-btn header-btn-balance" aria-label="Balance">
-          <span class="header-btn-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1667 6.66665V4.16665C14.1667 3.94563 14.0789 3.73367 13.9226 3.57739C13.7663 3.42111 13.5543 3.33331 13.3333 3.33331H4.99999C4.55797 3.33331 4.13404 3.50891 3.82148 3.82147C3.50892 4.13403 3.33333 4.55795 3.33333 4.99998M3.33333 4.99998C3.33333 5.44201 3.50892 5.86593 3.82148 6.17849C4.13404 6.49105 4.55797 6.66665 4.99999 6.66665H15C15.221 6.66665 15.433 6.75444 15.5893 6.91072C15.7455 7.067 15.8333 7.27897 15.8333 7.49998V9.99998M3.33333 4.99998V15C3.33333 15.442 3.50892 15.8659 3.82148 16.1785C4.13404 16.4911 4.55797 16.6666 4.99999 16.6666H15C15.221 16.6666 15.433 16.5788 15.5893 16.4226C15.7455 16.2663 15.8333 16.0543 15.8333 15.8333V13.3333M16.6667 9.99998V13.3333H13.3333C12.8913 13.3333 12.4674 13.1577 12.1548 12.8452C11.8423 12.5326 11.6667 12.1087 11.6667 11.6666C11.6667 11.2246 11.8423 10.8007 12.1548 10.4881C12.4674 10.1756 12.8913 9.99998 13.3333 9.99998H16.6667Z"/></svg></span>
+          <span class="header-btn-icon" aria-hidden="true"><img src="css/images/main-menu/wallet2.svg" alt="" width="20" height="20" class="header-btn-icon-img" /></span>
           <span class="header-btn-text">2,056.73 USD</span>
         </button>
-        <button type="button" class="header-btn header-btn-icon-only" aria-label="Language"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
-        <button type="button" class="header-btn header-btn-icon-only" aria-label="Help"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></button>
+        <button type="button" class="header-btn header-btn-icon-only" aria-label="Language"><img src="css/images/main-menu/custom-language.svg" alt="" width="20" height="20" class="header-btn-icon-img" /></button>
+        <button type="button" class="header-btn header-btn-icon-only" aria-label="Help"><img src="css/images/main-menu/help.svg" alt="" width="20" height="20" class="header-btn-icon-img" /></button>
         <div class="header-notifications">
-          <button type="button" class="header-btn header-btn-icon-only header-btn-bell" id="notifications-toggle" aria-label="Notifications" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="header-btn-badge" aria-hidden="true"></span></button>
+          <button type="button" class="header-btn header-btn-icon-only header-btn-bell" id="notifications-toggle" aria-label="Notifications" aria-expanded="false"><img src="css/images/main-menu/bell.svg" alt="" width="20" height="20" class="header-btn-icon-img" /><span class="header-btn-badge" aria-hidden="true"></span></button>
           <div class="notifications-popup" id="notifications-popup" role="dialog" aria-label="Notifications" hidden>
             <button type="button" class="notifications-popup-item notifications-popup-item-unread notifications-popup-item-open-dialog" id="notification-item-indicators">
               <div class="notifications-popup-item-head">
@@ -38,8 +38,16 @@
             </button>
           </div>
         </div>
-        <button type="button" class="header-btn header-btn-icon-only" aria-label="Apps"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/></svg></button>
-        <button type="button" class="header-btn header-btn-icon-only" aria-label="Profile"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></button>
+        <div class="header-apps">
+          <button type="button" class="header-btn header-btn-icon-only" id="apps-toggle" aria-label="Apps" aria-expanded="false" aria-haspopup="true"><img src="css/images/main-menu/grid-dots.svg" alt="" width="20" height="20" class="header-btn-icon-img" /></button>
+          <div class="apps-popup" id="apps-popup" role="menu" aria-label="Apps menu" hidden>
+            <a href="#" class="apps-popup-item" role="menuitem"><img src="css/images/main-menu/Personal area.svg" alt="" width="20" height="20" class="apps-popup-item-icon" /><span class="apps-popup-item-label">Personal area</span></a>
+            <a href="terminal.html" class="apps-popup-item" role="menuitem"><img src="css/images/main-menu/Terminal.svg" alt="" width="20" height="20" class="apps-popup-item-icon" /><span class="apps-popup-item-label">Exness terminal</span></a>
+            <a href="#" class="apps-popup-item" role="menuitem"><img src="css/images/main-menu/Public site.svg" alt="" width="20" height="20" class="apps-popup-item-icon" /><span class="apps-popup-item-label">Public website</span></a>
+            <a href="#" class="apps-popup-item" role="menuitem"><img src="css/images/main-menu/Pertners.svg" alt="" width="20" height="20" class="apps-popup-item-icon" /><span class="apps-popup-item-label">Partnership</span></a>
+          </div>
+        </div>
+        <button type="button" class="header-btn header-btn-icon-only" aria-label="Profile"><img src="css/images/main-menu/user-circle.svg" alt="" width="20" height="20" class="header-btn-icon-img" /></button>
       </div>
     </header>
 
@@ -73,39 +81,39 @@
       <aside class="sidebar" id="sidebar">
         <nav class="sidebar-nav">
           <div class="nav-item nav-item-collapsed">
-            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></span>
+            <span class="nav-icon" aria-hidden="true"><img src="css/images/main-menu/custom-trading.svg" alt="" width="20" height="20" class="nav-icon-img" /></span>
             <span class="nav-label">Trading</span>
             <span class="nav-chevron nav-chevron-up" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg></span>
           </div>
           <div class="nav-item nav-item-active nav-item-no-icon">
             <span class="nav-label">My accounts</span>
           </div>
-          <a href="#" class="nav-item nav-item-sub"><span class="nav-label">Summary</span></a>
+          <a href="#" class="nav-item nav-item-sub"><span class="nav-label">Performance</span></a>
           <a href="#" class="nav-item nav-item-sub"><span class="nav-label">History of orders</span></a>
           <a href="#" class="nav-item nav-item-sub"><span class="nav-label">Dividends</span></a>
-          <a href="terminal.html" class="nav-item nav-item-sub nav-item-with-end-icon"><span class="nav-label">Trading terminal</span><span class="nav-icon nav-icon-end" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg></span></a>
+          <a href="terminal.html" class="nav-item nav-item-sub nav-item-with-end-icon"><span class="nav-label">Exness terminal</span><span class="nav-icon nav-icon-end" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg></span></a>
           <div class="nav-item nav-item-collapsed">
-            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1667 6.66665V4.16665C14.1667 3.94563 14.0789 3.73367 13.9226 3.57739C13.7663 3.42111 13.5543 3.33331 13.3333 3.33331H4.99999C4.55797 3.33331 4.13404 3.50891 3.82148 3.82147C3.50892 4.13403 3.33333 4.55795 3.33333 4.99998M3.33333 4.99998C3.33333 5.44201 3.50892 5.86593 3.82148 6.17849C4.13404 6.49105 4.55797 6.66665 4.99999 6.66665H15C15.221 6.66665 15.433 6.75444 15.5893 6.91072C15.7455 7.067 15.8333 7.27897 15.8333 7.49998V9.99998M3.33333 4.99998V15C3.33333 15.442 3.50892 15.8659 3.82148 16.1785C4.13404 16.4911 4.55797 16.6666 4.99999 16.6666H15C15.221 16.6666 15.433 16.5788 15.5893 16.4226C15.7455 16.2663 15.8333 16.0543 15.8333 15.8333V13.3333M16.6667 9.99998V13.3333H13.3333C12.8913 13.3333 12.4674 13.1577 12.1548 12.8452C11.8423 12.5326 11.6667 12.1087 11.6667 11.6666C11.6667 11.2246 11.8423 10.8007 12.1548 10.4881C12.4674 10.1756 12.8913 9.99998 13.3333 9.99998H16.6667Z"/></svg></span>
+            <span class="nav-icon" aria-hidden="true"><img src="css/images/main-menu/wallet.svg" alt="" width="20" height="20" class="nav-icon-img" /></span>
             <span class="nav-label">Payments & wallet</span>
             <span class="nav-chevron nav-chevron-down" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
           </div>
           <div class="nav-item nav-item-collapsed">
-            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17v-6"/><path d="M13 17v-2"/><path d="M8 17v-10"/></svg></span>
+            <span class="nav-icon" aria-hidden="true"><img src="css/images/main-menu/news.svg" alt="" width="20" height="20" class="nav-icon-img" /></span>
             <span class="nav-label">Analytics</span>
             <span class="nav-chevron nav-chevron-down" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
           </div>
           <div class="nav-item nav-item-collapsed">
-            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg></span>
+            <span class="nav-icon" aria-hidden="true"><img src="css/images/main-menu/crown.svg" alt="" width="20" height="20" class="nav-icon-img" /></span>
             <span class="nav-label">Benefits</span>
             <span class="nav-chevron nav-chevron-down" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
           </div>
           <div class="nav-item nav-item-collapsed">
-            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+            <span class="nav-icon" aria-hidden="true"><img src="css/images/main-menu/heart.svg" alt="" width="20" height="20" class="nav-icon-img" /></span>
             <span class="nav-label">Support hub</span>
             <span class="nav-chevron nav-chevron-down" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
           </div>
           <div class="nav-item nav-item-collapsed">
-            <span class="nav-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
+            <span class="nav-icon" aria-hidden="true"><img src="css/images/main-menu/settings.svg" alt="" width="20" height="20" class="nav-icon-img" /></span>
             <span class="nav-label">Settings</span>
             <span class="nav-chevron nav-chevron-down" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
           </div>
@@ -173,8 +181,8 @@
             <div class="account-card-header">
               <div class="account-card-badges">
                 <span class="badge badge-tag">Real</span>
-                <span class="badge badge-tag">MT4</span>
-                <span class="badge badge-tag">Standard Cent</span>
+                <span class="badge badge-tag">MT5</span>
+                <span class="badge badge-tag">Pro</span>
               </div>
               <div class="account-card-title-row">
                 <h2 class="account-card-name">#213169630 My super account</h2>
@@ -183,19 +191,25 @@
             <div class="account-card-body">
               <div class="account-card-balance">1,567.61 USD</div>
               <div class="account-card-actions">
-                <button type="button" class="btn btn-trade">Trade</button>
+                <a href="terminal.html" class="btn btn-trade">Trade</a>
                 <button type="button" class="btn btn-outline">Deposit</button>
                 <button type="button" class="btn btn-outline">Withdraw</button>
+                <button type="button" class="btn btn-outline">Transfer</button>
                 <button type="button" class="btn btn-outline btn-icon" aria-label="More"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg></button>
               </div>
             </div>
             <div class="account-card-details">
-              <div class="account-detail"><span class="account-detail-label">Actual leverage</span><span class="account-detail-value">1:1000</span></div>
-              <div class="account-detail"><span class="account-detail-label">Free margin</span><span class="account-detail-value">1,353.93 USD</span></div>
-              <div class="account-detail"><span class="account-detail-label">Unrealized P&L</span><span class="account-detail-value">213.68 USD</span></div>
-              <div class="account-detail"><span class="account-detail-label">Equity</span><span class="account-detail-value">1,567.61 USD</span></div>
-              <div class="account-detail"><span class="account-detail-label">Server</span><span class="account-detail-value">MT4 Trial</span></div>
-              <div class="account-detail"><span class="account-detail-label">MT4 login</span><span class="account-detail-value">213169630</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Actual leverage</span><span class="account-detail-dots"></span><span class="account-detail-value">1:2000</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Free margin</span><span class="account-detail-dots"></span><span class="account-detail-value">1,353.93 USD</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Adjust leverage</span><span class="account-detail-dots"></span><span class="account-detail-value">1:2000</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Equity</span><span class="account-detail-dots"></span><span class="account-detail-value">1,567.61 USD</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Floating P/L</span><span class="account-detail-dots"></span><span class="account-detail-value">213.68 USD</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Platform</span><span class="account-detail-dots"></span><span class="account-detail-value">MT5</span></div>
+            </div>
+            <div class="account-card-server-row">
+              <span class="account-server-item"><span class="account-server-label">Server</span> <span class="account-server-value">Exness-MT5 Real27</span> <button type="button" class="account-copy-btn" aria-label="Copy server"><img src="css/images/main-menu/copy.svg" alt="" width="16" height="16" class="account-copy-icon" /></button></span>
+              <span class="account-server-item"><span class="account-server-label">MT5 login</span> <span class="account-server-value">213169630</span> <button type="button" class="account-copy-btn" aria-label="Copy login"><img src="css/images/main-menu/copy.svg" alt="" width="16" height="16" class="account-copy-icon" /></button></span>
+              <a href="#" class="account-change-password"><img src="css/images/main-menu/pencil.svg" alt="" width="16" height="16" class="account-change-password-icon" /> Change trading password</a>
             </div>
           </article>
 
@@ -205,7 +219,7 @@
               <div class="account-card-badges">
                 <span class="badge badge-tag">Real</span>
                 <span class="badge badge-tag">MT5</span>
-                <span class="badge badge-tag">Standard Cent</span>
+                <span class="badge badge-tag">Standard</span>
               </div>
               <div class="account-card-title-row">
                 <h2 class="account-card-name">#137000158 Experimental trading</h2>
@@ -214,19 +228,25 @@
             <div class="account-card-body">
               <div class="account-card-balance">489.12 USD</div>
               <div class="account-card-actions">
-                <button type="button" class="btn btn-trade">Trade</button>
+                <a href="terminal.html" class="btn btn-trade">Trade</a>
                 <button type="button" class="btn btn-outline">Deposit</button>
                 <button type="button" class="btn btn-outline">Withdraw</button>
+                <button type="button" class="btn btn-outline">Transfer</button>
                 <button type="button" class="btn btn-outline btn-icon" aria-label="More"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="6" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="12" cy="18" r="2"/></svg></button>
               </div>
             </div>
             <div class="account-card-details">
-              <div class="account-detail"><span class="account-detail-label">Actual leverage</span><span class="account-detail-value">1:200</span></div>
-              <div class="account-detail"><span class="account-detail-label">Free margin</span><span class="account-detail-value">489.12 USD</span></div>
-              <div class="account-detail"><span class="account-detail-label">Unrealized P&L</span><span class="account-detail-value">0.00 USD</span></div>
-              <div class="account-detail"><span class="account-detail-label">Equity</span><span class="account-detail-value">489.12 USD</span></div>
-              <div class="account-detail"><span class="account-detail-label">Server</span><span class="account-detail-value">MT5 Trial</span></div>
-              <div class="account-detail"><span class="account-detail-label">MT5 login</span><span class="account-detail-value">92298472</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Actual leverage</span><span class="account-detail-dots"></span><span class="account-detail-value">1:2000</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Free margin</span><span class="account-detail-dots"></span><span class="account-detail-value">489.12 USD</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Adjust leverage</span><span class="account-detail-dots"></span><span class="account-detail-value">1:2000</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Equity</span><span class="account-detail-dots"></span><span class="account-detail-value">489.12 USD</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Floating P/L</span><span class="account-detail-dots"></span><span class="account-detail-value">0.00 USD</span></div>
+              <div class="account-detail-row"><span class="account-detail-label">Platform</span><span class="account-detail-dots"></span><span class="account-detail-value">MT5</span></div>
+            </div>
+            <div class="account-card-server-row">
+              <span class="account-server-item"><span class="account-server-label">Server</span> <span class="account-server-value">Exness-MT5 Real27</span> <button type="button" class="account-copy-btn" aria-label="Copy server"><img src="css/images/main-menu/copy.svg" alt="" width="16" height="16" class="account-copy-icon" /></button></span>
+              <span class="account-server-item"><span class="account-server-label">MT5 login</span> <span class="account-server-value">295599679</span> <button type="button" class="account-copy-btn" aria-label="Copy login"><img src="css/images/main-menu/copy.svg" alt="" width="16" height="16" class="account-copy-icon" /></button></span>
+              <a href="#" class="account-change-password"><img src="css/images/main-menu/pencil.svg" alt="" width="16" height="16" class="account-change-password-icon" /> Change trading password</a>
             </div>
           </article>
         </div>
@@ -294,7 +314,7 @@
       toggle.addEventListener('click', function (e) {
         e.stopPropagation();
         if (isOpen()) closePopup();
-        else openPopup();
+        // else openPopup(); // notifications popup hidden for now, code kept for later use
       });
 
       document.addEventListener('click', function (e) {
@@ -304,6 +324,41 @@
       });
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && isOpen()) closePopup();
+      });
+    })();
+
+    (function () {
+      var toggle = document.getElementById('apps-toggle');
+      var popup = document.getElementById('apps-popup');
+      if (!toggle || !popup) return;
+
+      function openAppsPopup() {
+        popup.removeAttribute('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.classList.add('is-active');
+      }
+      function closeAppsPopup() {
+        popup.setAttribute('hidden', '');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('is-active');
+      }
+      function isAppsOpen() {
+        return !popup.hasAttribute('hidden');
+      }
+
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (isAppsOpen()) closeAppsPopup();
+        else openAppsPopup();
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!isAppsOpen()) return;
+        if (popup.contains(e.target) || toggle.contains(e.target)) return;
+        closeAppsPopup();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isAppsOpen()) closeAppsPopup();
       });
     })();
 

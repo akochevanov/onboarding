@@ -14,10 +14,7 @@
   <div class="layout">
     <header class="header header-terminal">
       <div class="header-left">
-        <a href="index.html" class="header-brand header-brand-terminal">
-          <img src="css/images terminal/back.svg" alt="" width="20" height="20" class="header-brand-back-icon" aria-hidden="true" />
-          TradeApp
-        </a>
+        <img src="css/images/exness yellow logo.svg" alt="TradeApp" class="header-brand header-brand-terminal-logo" />
         <div class="terminal-symbols" role="tablist" aria-label="Symbols">
           <button type="button" class="terminal-symbol-tab terminal-symbol-tab-active" role="tab" aria-selected="true" aria-label="EUR/USD">
             <img src="css/images terminal/Currency Pair.png" alt="" width="32" height="32" class="terminal-symbol-tab-icon" />
@@ -32,11 +29,33 @@
       </div>
       <div class="header-right">
         <div class="terminal-account">
-          <span class="terminal-account-label">Real # 137000158</span>
-          <span class="terminal-account-balance">489.12 USD</span>
+          <span class="terminal-account-label">Standard #213169630</span>
+          <span class="terminal-account-balance">1,567.61 USD</span>
         </div>
         <button type="button" class="header-btn header-btn-icon-only" aria-label="Layout"><img src="css/images terminal/header1.svg" alt="" width="24" height="24" /></button>
-        <button type="button" class="header-btn header-btn-icon-only" aria-label="Notifications"><img src="css/images terminal/header2.svg" alt="" width="24" height="24" /></button>
+        <div class="terminal-header-notifications">
+          <button type="button" class="header-btn header-btn-icon-only header-btn-bell-terminal" id="terminal-notifications-toggle" aria-label="Notifications" aria-expanded="false"><img src="css/images/main-menu/bell.svg" alt="" width="20" height="20" class="header-btn-icon-img" /></button>
+          <div class="terminal-notifications-popup" id="terminal-notifications-popup" role="dialog" aria-label="Notifications" hidden>
+            <button type="button" class="terminal-notifications-popup-item terminal-notifications-popup-item-unread">
+              <div class="terminal-notifications-popup-item-head">
+                <div class="terminal-notifications-popup-item-content">
+                  <span class="terminal-notifications-popup-item-title">Create personal indicators — a new way to see your trading ideas in action on live charts.</span>
+                  <div class="terminal-notifications-popup-item-time">25 Feb 2026, 06:35 AM</div>
+                </div>
+                <span class="terminal-notifications-popup-item-dot" aria-hidden="true"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="terminal-header-apps">
+          <button type="button" class="header-btn header-btn-icon-only" id="terminal-apps-toggle" aria-label="Apps" aria-expanded="false" aria-haspopup="true"><img src="css/images/main-menu/grid-dots.svg" alt="" width="20" height="20" class="header-btn-icon-img terminal-apps-icon" /></button>
+          <div class="terminal-apps-popup" id="terminal-apps-popup" role="menu" aria-label="Apps menu" hidden>
+            <a href="index.html" class="terminal-apps-popup-item" role="menuitem" title="Список счетов"><img src="css/images/main-menu/Personal area.svg" alt="" width="20" height="20" class="terminal-apps-popup-item-icon" /><span class="terminal-apps-popup-item-label">Personal area</span></a>
+            <a href="terminal.html" class="terminal-apps-popup-item" role="menuitem"><img src="css/images/main-menu/Terminal.svg" alt="" width="20" height="20" class="terminal-apps-popup-item-icon" /><span class="terminal-apps-popup-item-label">Exness terminal</span></a>
+            <a href="#" class="terminal-apps-popup-item" role="menuitem"><img src="css/images/main-menu/Public site.svg" alt="" width="20" height="20" class="terminal-apps-popup-item-icon" /><span class="terminal-apps-popup-item-label">Public website</span></a>
+            <a href="#" class="terminal-apps-popup-item" role="menuitem"><img src="css/images/main-menu/Pertners.svg" alt="" width="20" height="20" class="terminal-apps-popup-item-icon" /><span class="terminal-apps-popup-item-label">Partnership</span></a>
+          </div>
+        </div>
         <button type="button" class="header-btn header-btn-icon-only" aria-label="Settings"><img src="css/images terminal/header3.svg" alt="" width="24" height="24" /></button>
         <button type="button" class="btn btn-terminal-deposit">Deposit</button>
       </div>
@@ -251,9 +270,9 @@
             </div>
           </div>
           <div class="terminal-orders-stats">
-            <span class="terminal-orders-stat"><span class="terminal-orders-stat-label">Equity:</span> <span class="terminal-orders-stat-value">489.12 USD</span></span>
-            <span class="terminal-orders-stat"><span class="terminal-orders-stat-label">Free Margin:</span> <span class="terminal-orders-stat-value">489.12 USD</span></span>
-            <span class="terminal-orders-stat"><span class="terminal-orders-stat-label">Balance:</span> <span class="terminal-orders-stat-value">489.12 USD</span></span>
+            <span class="terminal-orders-stat"><span class="terminal-orders-stat-label">Equity:</span> <span class="terminal-orders-stat-value">1,567.61 USD</span></span>
+            <span class="terminal-orders-stat"><span class="terminal-orders-stat-label">Free Margin:</span> <span class="terminal-orders-stat-value">1,567.61 USD</span></span>
+            <span class="terminal-orders-stat"><span class="terminal-orders-stat-label">Balance:</span> <span class="terminal-orders-stat-value">1,567.61 USD</span></span>
             <span class="terminal-orders-stat"><span class="terminal-orders-stat-label">Margin:</span> <span class="terminal-orders-stat-value">0.00 USD</span></span>
             <span class="terminal-orders-stat"><span class="terminal-orders-stat-label">Margin level:</span> <span class="terminal-orders-stat-value">-</span></span>
           </div>
@@ -513,6 +532,74 @@
   </div>
   <script>
     (function () {
+      var toggle = document.getElementById('terminal-notifications-toggle');
+      var popup = document.getElementById('terminal-notifications-popup');
+      if (!toggle || !popup) return;
+
+      function openPopup() {
+        popup.removeAttribute('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+      function closePopup() {
+        popup.setAttribute('hidden', '');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+      function isOpen() {
+        return !popup.hasAttribute('hidden');
+      }
+
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (isOpen()) closePopup();
+        // else openPopup(); /* notifications popup disabled, code kept for later */
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!isOpen()) return;
+        if (popup.contains(e.target) || toggle.contains(e.target)) return;
+        closePopup();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen()) closePopup();
+      });
+    })();
+
+    (function () {
+      var toggle = document.getElementById('terminal-apps-toggle');
+      var popup = document.getElementById('terminal-apps-popup');
+      if (!toggle || !popup) return;
+
+      function openAppsPopup() {
+        popup.removeAttribute('hidden');
+        toggle.setAttribute('aria-expanded', 'true');
+        toggle.classList.add('is-active');
+      }
+      function closeAppsPopup() {
+        popup.setAttribute('hidden', '');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.classList.remove('is-active');
+      }
+      function isAppsOpen() {
+        return !popup.hasAttribute('hidden');
+      }
+
+      toggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (isAppsOpen()) closeAppsPopup();
+        else openAppsPopup();
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!isAppsOpen()) return;
+        if (popup.contains(e.target) || toggle.contains(e.target)) return;
+        closeAppsPopup();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isAppsOpen()) closeAppsPopup();
+      });
+    })();
+
+    (function () {
       var mainWrap = document.getElementById('main-wrap-terminal');
       var leadBtn = document.getElementById('terminal-lead-btn');
       var leadPanel = document.getElementById('terminal-lead-panel');
@@ -735,7 +822,10 @@
         onboardingTooltip.style.transform = 'none';
       }
 
+      var onboardingStorageKey = 'terminalOnboardingSeen';
+
       function showOnboarding() {
+        if (sessionStorage.getItem(onboardingStorageKey)) return;
         if (!onboardingOverlay || !onboardingTooltip || !indicatorsBtn) return;
         onboardingOverlay.classList.add('is-visible');
         onboardingOverlay.setAttribute('aria-hidden', 'false');
@@ -746,6 +836,9 @@
       }
 
       function hideOnboarding() {
+        try {
+          sessionStorage.setItem(onboardingStorageKey, 'true');
+        } catch (e) {}
         if (onboardingOverlay) {
           onboardingOverlay.classList.remove('is-visible');
           onboardingOverlay.setAttribute('aria-hidden', 'true');
@@ -758,6 +851,9 @@
       }
 
       if (onboardingTooltip) onboardingTooltip.addEventListener('click', hideOnboarding);
+      if (onboardingOverlay) onboardingOverlay.addEventListener('click', function (e) {
+        if (e.target === onboardingOverlay) hideOnboarding();
+      });
       if (onboardingOpenBtn) onboardingOpenBtn.addEventListener('click', function (e) {
         e.stopPropagation();
         hideOnboarding();
